@@ -1,3 +1,11 @@
+#folders
 /Library/
 /Logs/
 /obj/
+/.vs/
+/Temp/
+
+#files
+
+*.sln
+*.csproj

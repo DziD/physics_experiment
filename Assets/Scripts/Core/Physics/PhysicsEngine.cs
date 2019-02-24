@@ -44,8 +44,9 @@ public class PhysicsEngine : MonoBehaviour
         {
             foreach (var physicsEngineB in PhysicsEngineArray)
             {
-                if (physicsEngineA == physicsEngineB)
+                if (physicsEngineA == physicsEngineB || physicsEngineA == this)
                     continue;
+
                 var offset = physicsEngineA.transform.position - physicsEngineB.transform.position;
                 var rSquared = offset.sqrMagnitude;
                 var gravityMagnitude = BigG * physicsEngineA.Mass * physicsEngineB.Mass / rSquared;
